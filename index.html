@@ -16,18 +16,19 @@
 
   <style>
     body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    @keyframes pulse-glow {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.6; }
+
+    @keyframes glow-pulse {
+      0%, 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(0.95); }
+      50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.05); }
     }
-    .pulse-bg { animation: pulse-glow 4s ease-in-out infinite; }
+    .glow { animation: glow-pulse 5s ease-in-out infinite; }
   </style>
 </head>
-<body class="bg-black text-white min-h-screen flex flex-col">
+<body class="bg-black text-white min-h-screen flex flex-col overflow-hidden">
 
   <!-- Ambient background glow -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none">
-    <div class="pulse-bg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl"></div>
+    <div class="glow absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-white/10 rounded-full blur-3xl"></div>
   </div>
 
   <!-- Top nav -->
@@ -54,7 +55,7 @@
         Design AI humanoids. Mint them on-chain. Stake your claim in the era to come.
       </p>
 
-      <!-- Email signup form (will be connected to Tally in next step) -->
+      <!-- Email signup form -->
       <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6" onsubmit="event.preventDefault(); alert('Form will be connected in the next step.')">
         <input
           type="email"
