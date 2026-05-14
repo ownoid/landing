@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ownoid — Own your humanoid.</title>
+  <meta name="description" content="AI-generated humanoid designs. Minted on-chain. Stake your claim in the era to come." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+    .pulse-bg { animation: pulse-glow 4s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+
+  <!-- Ambient background glow -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="pulse-bg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Top nav -->
+  <header class="relative z-10 px-6 py-6 sm:px-12 sm:py-8">
+    <div class="text-sm font-semibold tracking-tight">ownoid</div>
+  </header>
+
+  <!-- Main content -->
+  <main class="relative z-10 flex-1 flex items-center justify-center px-6 sm:px-12">
+    <div class="max-w-2xl w-full text-center">
+
+      <!-- Status tag -->
+      <div class="inline-block mb-8 px-3 py-1 text-xs font-medium tracking-wider uppercase border border-white/20 rounded-full text-white/70">
+        Coming soon
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-5xl sm:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
+        Own your<br/>humanoid.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg sm:text-xl text-white/60 mb-12 max-w-lg mx-auto leading-relaxed">
+        Design AI humanoids. Mint them on-chain. Stake your claim in the era to come.
+      </p>
+
+      <!-- Email signup form (will be connected to Tally in next step) -->
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6" onsubmit="event.preventDefault(); alert('Form will be connected in the next step.')">
+        <input
+          type="email"
+          placeholder="your@email.com"
+          required
+          class="flex-1 px-5 py-3 bg-white/5 border border-white/15 rounded-full text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition"
+        />
+        <button
+          type="submit"
+          class="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition whitespace-nowrap"
+        >
+          Get early access
+        </button>
+      </form>
+
+      <p class="text-xs text-white/40">
+        Be among the first to design and own a humanoid.
+      </p>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 px-6 py-8 sm:px-12 sm:py-10">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/40">
+      <div>© 2026 Ownoid</div>
+      <div class="flex gap-6">
+        <a href="https://x.com/ownoid" target="_blank" rel="noopener" class="hover:text-white transition">X</a>
+        <a href="https://instagram.com/ownoid" target="_blank" rel="noopener" class="hover:text-white transition">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
