@@ -9,6 +9,9 @@
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Tally embed script -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
   <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,21 +58,15 @@
         Design AI humanoids. Mint them on-chain. Stake your claim in the era to come.
       </p>
 
-      <!-- Email signup form -->
-      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6" onsubmit="event.preventDefault(); alert('Form will be connected in the next step.')">
-        <input
-          type="email"
-          placeholder="your@email.com"
-          required
-          class="flex-1 px-5 py-3 bg-white/5 border border-white/15 rounded-full text-white placeholder-white/40 focus:outline-none focus:border-white/40 transition"
-        />
-        <button
-          type="submit"
-          class="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition whitespace-nowrap"
-        >
-          Get early access
-        </button>
-      </form>
+      <!-- Tally popup button -->
+      <button
+        data-tally-open="1ADZ5b"
+        data-tally-layout="modal"
+        data-tally-width="500"
+        class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition text-base mb-6"
+      >
+        Get early access →
+      </button>
 
       <p class="text-xs text-white/40">
         Be among the first to design and own a humanoid.
